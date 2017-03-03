@@ -42,16 +42,5 @@
         </g:each>
         </select>
     </div>
-
-    <div>
-    <p>Email Addresses</p>
-        <g:each in="${persons}" var="item">
-            <g:each in="${item}" var="subItem">
-                <p>Email: ${subItem[1]}</p>
-            </g:each>
-        </g:each>
-
-    </div>
-
 </body>
 </html>
