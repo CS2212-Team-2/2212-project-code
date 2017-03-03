@@ -169,4 +169,7 @@ class HouseController {
         def housecount = House.count()
         render housecount
     }
+    def demo(){
+
+    }
 }
