@@ -2,68 +2,8 @@
 <html>
 <asset:stylesheet src="style.css"/>
 <head>
-<style>
-    /* Popup container - can be anything you want */
-    .popup {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    /* The actual popup */
-    .popup .popuptext {
-        visibility: hidden;
-        width: 160px;
-        background-color: #555;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 8px 0;
-        position: absolute;
-        z-index: 1;
-        bottom: 125%;
-        left: 50%;
-        margin-left: -80px;
-    }
-
-    /* Popup arrow */
-    .popup .popuptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-    }
-
-    /* Toggle this class - hide and show the popup */
-    .popup .show {
-        visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s;
-    }
-
-    /* Add animation (fade in the popup) */
-    @-webkit-keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
-
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity:1 ;}
-    }
-    </style>
-
     <title>HouseMates</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-    <link rel="stylesheet" href="css/theme3.css"/>
 </head>
 <body>
 <!--code for top right corner, user name, logout and add person -->
@@ -91,9 +31,7 @@
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize-button" style="display: block;">Authorize</button>
     <button id="signout-button" style="display: none;">Sign Out</button>
-    <br>a
-    <br>a
-    <br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="popup" onclick="myFunction2()">Add an Event/Task
         <span class="popuptext" id="myPopup"><button onclick="myFunction()">Add </button></br>
             Year: <input type="text" id="YearInputEvent" value="YYYY">
@@ -501,12 +439,17 @@
     *
     * @param {string} message Text to be placed in pre element.
     */
+    function popupMessage(){
+        alert("Description of the event");
+    }
+
+
     function appendPre(message) {
     var events = [];
     var b = {};
     for (i = 0; i < year.length; i++) {
     //b = {'Date': new Date(year[i], month[i], day[i]), 'Title': summary[i], 'Link': desc[i]}
-    b = {'Date': new Date(year[i], month[i], day[i]), 'Title': '*', 'Link': desc[i]}
+    b = {'Date': new Date(year[i], month[i], day[i]), 'Title': summary[i], 'Link': function(){popupMessage()}};
     events.push(b);
     }
 
@@ -620,14 +563,10 @@
     </div>
 
     </h3>
-    <p>Google Calendar API Quickstart</p>
     <div id="caleandar">
     </div>
-    <p>Google Calendar API Quickstart</p>
     <!--Add buttons to initiate auth sequence and sign out-->
     <pre id="content"></pre>
-    <script type="text/javascript" src="js/caleandar.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
     <script async defer src="https://apis.google.com/js/api.js"
             onload="this.onload=function(){};handleClientLoad()"
             onreadystatechange="if (this.readyState === 'complete') this.onload()">
