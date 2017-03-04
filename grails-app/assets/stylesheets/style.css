@@ -146,6 +146,7 @@
     }
 .cld-labels, .cld-days{
   padding-left: 0;
+  background: white;
 }
   .cld-label, .cld-day{
     box-sizing: border-box;
@@ -154,7 +155,6 @@
     text-align: center;
   }
   .cld-day{
-    display: block;
     float: left;
     position: relative;
     margin: 0;
@@ -162,6 +162,7 @@
     height: 90px;
     border: 1px solid #ddd;
     overflow-y: auto;
+    background: white
   }
   .cld-day.clickable:hover{
     cursor: pointer;
@@ -178,21 +179,30 @@
     .cld-number{
       margin: 0;
       text-align: left;
+      background: white;
     }
+
       .cld-title{
-        font-size: 10px;
+        font-size: 14px;
         display: block;
         margin: 0;
         font-weight: normal;
+        background: white;
       }
+
       .cld-day:hover{
+        display: block;
         background: #eee;
+        background-color: lightblue;
       }
       .cld-number.eventday{
+        background: white;
         font-weight: bold;
       }
       .cld-number.eventday:hover{
-        background: #eee;
+        cursor: pointer;
+        background: white;
       }
       .today .cld-number.eventday:hover{
       }
+
